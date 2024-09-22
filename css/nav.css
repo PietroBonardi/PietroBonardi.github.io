@@ -2,22 +2,18 @@
 .nav-list ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    padding: 10px 400px;
-    margin: 0;
+    flex: auto;
+    padding: 10px 0px;
 }
 
 .nav-list ul li {
     list-style: square inside;
     color: black;
-    margin: 0 20px;
+    margin: 0px 40px;
 }
 
 .nav-list ul li a {
-    list-style: square inside;
-    color: black;
-    margin: 0 20px;
-    font-size: x-large;
+    color: rgb(79, 79, 79);
 }
 
 .nav-list ul li a:hover{
@@ -27,6 +23,7 @@
 /* NAV LINKS */
 .nav-links {
     display: flex;
+    flex-direction: row;
     justify-content: right;
 }
 
@@ -41,5 +38,4 @@
 
 .nav-links a:hover {
     color: rgb(136, 76, 164);
-    /* Colore di sfondo al passaggio del mouse */
 }

@@ -3,21 +3,16 @@ body {
     color: rgb(0, 0, 0);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: x-large;
-    margin: 0;
-    padding: 0;
 }
 
 header {
     background: antiquewhite;
-    margin: 20px 40px;
-    padding: 20px 40px;
+    margin: 0px 40px;
 }
-
 
 footer {
     background: antiquewhite;
-    margin: 30px 40px;
-    padding: 20px 40px;
+    margin: 0px 40px;
     font-size: large;
     text-align: center;
 }
