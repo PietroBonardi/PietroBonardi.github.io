@@ -1,8 +1,10 @@
 body {
+    font-family: Arial, sans-serif;
     background-color: antiquewhite;
-    color: rgb(0, 0, 0);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: x-large;
+    margin: 40;
+    padding: 40;
 }
 
 header {
@@ -15,4 +17,134 @@ footer {
     margin: 0px 40px;
     font-size: large;
     text-align: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.intro-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.image-div {
+    margin-right: 20px;
+}
+
+.image-div img {
+    max-width: 100%;
+    height: auto;
+}
+
+.whoami {
+    margin: 20px;
+    flex: 1;
+    color: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.whoami p {
+    margin: 10px 20px;
+    list-style-type: disc;
+}
+
+.whoami ul {
+    list-style: none;
+    margin: 0px 10px;
+    position: relative;
+}
+
+.whoami ul li {
+    margin: 5px 0;
+    position: relative;
+}
+
+.whoami ul li::before {
+    content: '■';
+    font-size: 0.5em;
+    color: #000000;
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    
+}
+
+
+.mailto {
+    color: rgba(69, 7, 7, 0.619);
+}
+
+.mailto:hover {
+    color: rgb(97, 71, 88);
+}
+
+strong {
+    color: black;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+
+.nav-link-section {
+    background-color: antiquewhite;
+    padding: 10px;
+    width: 100%;
+}
+
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #000000d2;
+    color: white;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: rgb(136, 76, 164);
+}
+
+
+hr {
+    width: 100%;
+    margin: 20px 0;
+    border: none;
+    border-top: 2px solid rgba(136, 76, 164, 0.648);
+}
+
+/* NAV UL */
+.nav-list ul {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+    padding: 10px 0px;
+}
+
+.nav-list ul li {
+    list-style: square inside;
+    color: black;
+    margin: 0px 40px;
+}
+
+.nav-list ul li a {
+    color: rgb(79, 79, 79);
+}
+
+.nav-list ul li a:hover {
+    color: rgb(136, 76, 164);
 }
