@@ -7,11 +7,7 @@ body {
     padding: 40px;
 }
 
-header {
-    background: antiquewhite;
-    margin: 0px 40px;
-}
-
+header,
 footer {
     background: antiquewhite;
     margin: 0px 40px;
@@ -19,35 +15,36 @@ footer {
     text-align: center;
 }
 
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
 }
 
 .intro-section {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
+
 .image-div {
-    margin-right: 20px;
+    margin: 20px 10px;
 }
 
 .image-div img {
     max-width: 100%;
-    height: auto;
+    border-radius: 5px;
 }
 
+
 .whoami {
-    margin: 20px;
-    flex: 1;
+    margin: 20px 10px;
     color: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.05);
     border-radius: 5px;
+    font-size: 0.9em;
+    /* Reduced font size */
 }
 
 .whoami p {
@@ -62,7 +59,6 @@ footer {
 }
 
 .whoami ul li {
-    margin: 5px 0;
     position: relative;
 }
 
@@ -78,28 +74,25 @@ footer {
 
 
 .mailto {
-    color: rgba(0, 13, 255, 0.619);
-}
-
-.mailto:hover {
     color: rgb(136, 76, 164);
 }
 
+.mailto:hover {
+    color: rgba(136, 76, 164, 0.696);
+}
+
 strong {
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 1.0em;
     font-weight: bold;
 }
 
 
 .nav-link-section {
-    background-color: antiquewhite;
-    padding: 10px;
-    width: 100%;
+    margin-left: auto;
+
 }
 
-
-/* NAV LINKS */
 .nav-links {
     display: flex;
     flex-direction: row;
@@ -108,58 +101,44 @@ strong {
 
 .nav-links a {
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 3px;
     padding: 10px 20px;
-    background-color: #000000d2;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     border-radius: 5px;
 }
 
 .nav-links a:hover {
-    color: rgb(136, 76, 164);
+    color: rgb(21, 223, 245);
 }
 
 
 hr {
     width: 100%;
-    margin: 20px 0;
+    margin-top: 30px;
     border: none;
     border-top: 2px solid rgb(136, 76, 164);
 }
 
-/* NAV UL */
-.nav-list ul {
-    display: flex;
-    flex-direction: row;
-    flex: auto;
-    padding: 10px 0px;
+.explore-list ul li a {
+    color: rgba(0, 0, 0, 0.8);
 }
 
-.nav-list ul li {
-    list-style: square inside;
-    color: black;
-    margin: 0px 40px;
+.explore-list ul li a:hover {
+    color: rgb(21, 223, 245);
 }
 
-.nav-list ul li a {
-    color: rgb(79, 79, 79);
-}
-
-.nav-list ul li a:hover {
-    color: rgb(136, 76, 164);
-}
-
-
-/*responsive*/
-@media (max-width: 600px) {
+/* Media Queries for Responsiveness */
+@media (max-width: 756px) {
     body {
-        margin: 20px;
-        padding: 20px;
+        margin: 0px;
+        padding: 0px;
+        font-size: medium;
     }
 
     header,
     footer {
-        margin: 0;
+        font-size: small;
     }
 
     .container {
@@ -171,31 +150,29 @@ hr {
         align-items: center;
     }
 
-    .image-div {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
     .whoami {
-        margin: 0;
-        width: 100%;
+        margin: 10px;
+        font-size: 0.8em;
+        /* Further reduce font size */
     }
 
+    .nav-link-section {
+        margin-left: 10px;
+        text-align: center; /* Center the nav links */
+    } 
+    
     .nav-links {
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
     }
 
     .nav-links a {
-        margin: 10px 0;
+        margin: 5px 0;
     }
 
-    .nav-list ul {
-        flex-direction: column;
-        align-items: center;
+    hr {
+        margin-top: 20px;
     }
 
-    .nav-list ul li {
-        margin: 10px 0;
-    }
 }
