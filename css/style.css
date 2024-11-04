@@ -3,8 +3,8 @@ body {
     background-color: antiquewhite;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: x-large;
-    margin: 40;
-    padding: 40;
+    margin: 40px;
+    padding: 40px;
 }
 
 header {
@@ -73,7 +73,7 @@ footer {
     position: absolute;
     left: -20px;
     top: 5px;
-    
+
 }
 
 
@@ -82,7 +82,7 @@ footer {
 }
 
 .mailto:hover {
-    color:  rgb(136, 76, 164);
+    color: rgb(136, 76, 164);
 }
 
 strong {
@@ -124,7 +124,7 @@ hr {
     width: 100%;
     margin: 20px 0;
     border: none;
-    border-top: 2px solid  rgb(136, 76, 164);
+    border-top: 2px solid rgb(136, 76, 164);
 }
 
 /* NAV UL */
@@ -147,4 +147,55 @@ hr {
 
 .nav-list ul li a:hover {
     color: rgb(136, 76, 164);
+}
+
+
+/*responsive*/
+@media (max-width: 600px) {
+    body {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    header,
+    footer {
+        margin: 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-div {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .whoami {
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+
+    .nav-list ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list ul li {
+        margin: 10px 0;
+    }
 }
