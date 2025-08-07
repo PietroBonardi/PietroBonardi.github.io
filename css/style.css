@@ -1,178 +1,158 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: antiquewhite;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: x-large;
-    margin: 40px;
-    padding: 40px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-header,
-footer {
-    background: antiquewhite;
-    margin: 0px 40px;
-    font-size: large;
-    text-align: center;
-}
-
+/* Layout Container */
 .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 25px;
 }
 
+/* Intro Section */
 .intro-section {
     display: flex;
+    gap: 20px;
     align-items: flex-start;
-    margin-bottom: 10px;
 }
 
-
-.image-div {
-    margin: 20px 10px;
-}
 
 .image-div img {
-    max-width: 100%;
-    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
 }
-
 
 .whoami {
-    margin: 20px 10px;
-    color: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 5px;
-    font-size: 0.9em;
-    /* Reduced font size */
+    background: rgba(0, 0, 0, 0.03);
+    padding: 25px;
+    border-radius: 8px;
 }
 
-.whoami p {
-    margin: 10px 20px;
-    list-style-type: disc;
-}
 
 .whoami ul {
-    list-style: none;
-    margin: 0px 10px;
+    margin: 0px 30px;
+}
+
+.whoami li {
+    margin-bottom: 0px;
+    padding-left: 0px;
     position: relative;
 }
 
-.whoami ul li {
-    position: relative;
-}
 
-.whoami ul li::before {
-    content: '■';
-    font-size: 0.5em;
-    color: #000000;
-    position: absolute;
-    left: -20px;
-    top: 5px;
-
-}
-
-
-.mailto {
-    color: rgb(136, 76, 164);
-}
-
-.mailto:hover {
-    color: rgba(136, 76, 164, 0.696);
-}
-
-strong {
-    color: rgb(0, 0, 0);
-    font-size: 1.0em;
-    font-weight: bold;
-}
-
-
-.nav-link-section {
-    margin-left: auto;
-
-}
+/* Navigation */
 
 .nav-links {
     display: flex;
-    flex-direction: row;
-    justify-content: right;
+    gap: 15px;
+    justify-content:center ; 
+    flex-wrap: wrap;
 }
 
 .nav-links a {
     text-decoration: none;
-    margin: 0 3px;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.8);
+    padding: 12px 20px;
+    background: #333;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: rgb(21, 223, 245);
+    color: #15dfff;
+    transform: translateY(-5px);
 }
 
+/* Typography */
+strong {
+    color: #333;
+    font-weight: 600;
+}
 
+/* Links */
+.mailto {
+    color: #0c16da;
+}
+
+.mailto:hover {
+    color: #0acae7;
+    transform: translateY(-5px);
+}
+
+/* Divider */
 hr {
-    width: 100%;
-    margin-top: 30px;
     border: none;
-    border-top: 2px solid rgb(136, 76, 164);
+    height: 2px;
+    background: #333;
+    margin: 30px 0;
 }
 
-.explore-list ul li a {
-    color: rgba(0, 0, 0, 0.8);
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 16px;
 }
 
-.explore-list ul li a:hover {
-    color: rgb(21, 223, 245);
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 756px) {
+/* Responsive Design */
+@media (max-width: 768px) {
     body {
-        margin: 0px;
-        padding: 0px;
-        font-size: medium;
-    }
-
-    header,
-    footer {
-        font-size: small;
+        margin: 0;
+        padding: 20px;
+        font-size: 16px;
     }
 
     .container {
-        padding: 10px;
+        gap: 30px;
     }
 
     .intro-section {
         flex-direction: column;
-        align-items: center;
+        gap: 20px;
     }
 
-    .whoami {
-        margin: 10px;
-        font-size: 0.8em;
-        /* Further reduce font size */
+    .image-div {
+        text-align: center;
+    }
+
+    .image-div img {
+        max-width: 200px;
     }
 
     .nav-link-section {
-        margin-left: 10px;
-        text-align: center; /* Center the nav links */
-    } 
-    
+        text-align: center;
+    }
+
     .nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
+        justify-content: center;
+        gap: 10px;
     }
 
     .nav-links a {
-        margin: 5px 0;
+        padding: 10px 15px;
+        font-size: 14px;
     }
 
-    hr {
-        margin-top: 20px;
+    footer {
+        margin-top: 40px;
     }
-
 }
