@@ -26,28 +26,35 @@ body {
 .intro-section {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
+
+.image-div {
+    flex-shrink: 0;
+}
 
 .image-div img {
     width: 100%;
-    max-width: 300px;
+    max-width: 355px;
+    height: 100%;
+    object-fit: cover; /* fills the space without distorting */
     border-radius: 8px;
+    display: block;
 }
 
-.whoami {
+.whoami-div {
     background: rgba(0, 0, 0, 0.03);
-    padding: 25px;
+    padding: 15px;
     border-radius: 8px;
 }
 
 
-.whoami ul {
+.whoami-div ul {
     margin: 0px 30px;
 }
 
-.whoami li {
+.whoami-div li {
     margin-bottom: 0px;
     padding-left: 0px;
     position: relative;
@@ -55,18 +62,17 @@ body {
 
 
 /* Navigation */
-
 .nav-links {
     display: flex;
     gap: 15px;
-    justify-content:center ; 
+    justify-content:left ; 
     flex-wrap: wrap;
 }
 
 .nav-links a {
     text-decoration: none;
-    padding: 12px 20px;
-    background: #333;
+    padding: 8px 20px;
+    background: #333333;
     color: white;
     border-radius: 6px;
     font-weight: 500;
@@ -74,7 +80,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #15dfff;
+    color: #ffc802;
     transform: translateY(-5px);
 }
 
@@ -86,11 +92,11 @@ strong {
 
 /* Links */
 .mailto {
-    color: #0c16da;
+    color: #000000;
 }
 
 .mailto:hover {
-    color: #0acae7;
+    color: #ffc802;
     transform: translateY(-5px);
 }
 
@@ -111,6 +117,117 @@ footer {
     border-top: 1px solid #eee;
     color: #666;
     font-size: 16px;
+}
+
+.dev-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.back-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+.back-link:hover {
+    color: #ffc802;
+}
+
+/* ---- shared card base ---- */
+.card {
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    padding: 22px 26px;
+}
+
+/* ---- section header ---- */
+.section-header {
+    margin-bottom: 4px;
+}
+
+/* ---- projects grid ---- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: #000000;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+.project-card a.project-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1.5px solid #333;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.project-card a.project-link:hover {
+    color: #ffc802;
+    border-color: #ffc802;
+}
+
+.project-card .meta {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 12px;
+}
+
+.project-details {
+    margin-bottom: 14px;
+}
+
+.project-details summary {
+    font-size: 13px;
+    font-weight: 500;
+    color: #aaa;
+    cursor: pointer;
+    list-style: none;
+    transition: color 0.2s;
+}
+
+.project-details summary:hover {
+    color: #ffc802;
+}
+
+.project-details[open] summary {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.project-details p {
+    font-size: 14px;
+    color: #8a8676;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
 /* Responsive Design */
@@ -150,6 +267,10 @@ footer {
     .nav-links a {
         padding: 10px 15px;
         font-size: 14px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     footer {
